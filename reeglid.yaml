@@ -1,0 +1,134 @@
+# LEGAD reeglid — kolm põhimõtet + õiguslik alus
+#
+# Iga reegel viitab allikale ja ütleb, mida käsus peab sisaldama, et seda saaks
+# kontrollida. `kontroll` on reeglid.py funktsiooni nimi. Sisu muudetav ilma koodi
+# puutumata; kontrollid ise on koodis, sest nad peavad lugema fakte.
+#
+# `ihl_id` seob reegli Grete IHL-registri nõudega (materjalid/grete/, IHL-R01…R47).
+# Alus: grete/IHL_NOUDED.md (R01–R47) ja grete/OIGUSRAAM.md.
+
+- id: L01
+  pealkiri: "Õigusrežiim on käsus nimetamata"
+  pohimote: "õiguslik alus"
+  noue: "Käsk peab ütlema, mis režiimis tegutsetakse (R1–R4), sest režiim määrab testi ja otsustaja."
+  allikas: "KKS § 45, § 48; KORKS § 40 lg 4"
+  ihl_id: ""
+  soovitus: "Lisa punkti 1 või 5 režiim ja õiguslik alus. Ilma režiimita ei saa valida proportsionaalsuse standardit."
+  kontroll: reziim
+
+- id: L02
+  pealkiri: "Vananenud õigusviide käsus"
+  pohimote: "õiguslik alus"
+  noue: "Alates 01.10.2026 kehtib KORKS; Riigikaitseseadus ja RSKS on kehtetud."
+  allikas: "KORKS (RT I, 30.06.2026, 1); grete/OIGUSRAAM.md ptk 0"
+  ihl_id: ""
+  soovitus: "Asenda viide Riigikaitseseadusele või RSKS-le KORKS-iga ja kontrolli, et sisu ei jää vana akti järgi."
+  kontroll: vananenud_viited_kaskus
+
+- id: L03
+  pealkiri: "ROE-kaart ei ole tuvastatud"
+  pohimote: "õiguslik alus"
+  noue: "Käsk peab viitama kehtivale ROE-kaardile või jõu kasutamise korrale; ROE sisu on piiratud ja seda ei tohi välja mõelda."
+  allikas: "KKS § 44 lg 2; grete/OIGUSRAAM.md ptk 3–4"
+  ihl_id: ""
+  soovitus: "Lisa ROE-kaardi viide ja versioon või kinnita, et üksus tegutseb ülema kehtiva ROE järgi. Ära tsiteeri piiratud korda."
+  kontroll: roe_viide
+
+- id: L04
+  pealkiri: "ROE piirab rohkem kui seadus — märgi poliitilise piiranguna"
+  pohimote: "õiguslik alus"
+  noue: "ROE võib keelata rohkem kui IHL, aga ei tohi lubada vähem. Piirang ei ole seadusest tulenev nõue."
+  allikas: "Sanremo ROE Handbook (2009), foreword ja ptk IV; KKS § 44 lg 4–5"
+  ihl_id: ""
+  soovitus: "Märgi lisa juurde, et tegu on käskija poliitilise piiranguga. Kui liitlaste ROE lubab IHL-iga vastuolus olevat tegevust, ei täideta seda ja teatatakse (KKS § 44 lg 4–5)."
+  kontroll: roe_piirang
+
+- id: E01
+  pealkiri: "Tõke kultuurivara ja meditsiinipunkti juures"
+  pohimote: "eristamine"
+  noue: "Kultuurivara ja meditsiiniobjekte ei tohi kasutada sõjaliseks otstarbeks ega muuta neid sihtmärgiks."
+  allikas: "AP I art 53(1); art 12; art 58(a)"
+  ihl_id: "IHL-R15, IHL-R20"
+  soovitus: "Vali tõkkele teine asukoht või tõenda kirjalikult, et tõke ei kasuta kultuurivara ega takista meditsiini. Kooskõlasta LEGAD-iga."
+  kontroll: toke_kultuurivara
+
+- id: E02
+  pealkiri: "Sihtmärkide tuvastuskriteeriumid puuduvad"
+  pohimote: "eristamine"
+  noue: "Iga sihtmärgi kohta peab olema tuvastus: mille alusel ja millal on kindlaks tehtud, et tegu on sõjalise objektiga."
+  allikas: "AP I art 57(2)(a)(i); art 52(2)"
+  ihl_id: "IHL-R08"
+  soovitus: "Lisa iga sihtmärgi juurde tuvastusallikas, -aeg ja kinnitaja. Ilma selleta on tegu oletusega, mitte sihtmärgiga."
+  kontroll: sihtmarkide_tuvastus
+
+- id: E03
+  pealkiri: "Lõhkamine elutähtsa taristu lähedal"
+  pohimote: "eristamine"
+  noue: "Tsiviiltaristu (sild, maantee) on sõjaline objekt ainult siis, kui see annab tõhusa panuse ja hävitamine annab konkreetse eelise praegu."
+  allikas: "AP I art 52(2); art 57(2)(a)(ii)"
+  ihl_id: "IHL-R05, IHL-R09"
+  soovitus: "Täpsusta lõhkekohtade asukoht ja mõju sillale. Kui sild on tsiviiltaristu, põhjenda sõjalist vajadust ja kaalu alternatiivi."
+  kontroll: lohkamine_taristu
+
+- id: P01
+  pealkiri: "Tsiviilkahju hinnang (CDE) puudub"
+  pohimote: "proportsionaalsus"
+  noue: "Oodatav tsiviilohver ei tohi olla ülemäärane võrreldes oodatava sõjalise eelisega; hinnang peab olema käsus."
+  allikas: "AP I art 51(5)(b); art 57(2)(a)(iii)"
+  ihl_id: "IHL-R10"
+  soovitus: "Lisa iga tuleülesande juurde tsiviilkahju hinnang ja komandöri otsus. Kui hinnangut ei ole, lükka löök edasi."
+  kontroll: tsiviilkahju_hinnang
+
+- id: P02
+  pealkiri: "Evakuatsiooni lõpp on kontrollimata"
+  pohimote: "proportsionaalsus"
+  noue: "Enne tulelööki peab olema kinnitus, et tsiviilid on alalt lahkunud või ohutus kauguses."
+  allikas: "AP I art 58(a); art 57(2)(c)"
+  ihl_id: "IHL-R40"
+  soovitus: "Lisa evakuatsiooni lõppaeg ja kinnituskanal: kes kinnitab, et ala on tühi, enne esimest tulelööki."
+  kontroll: evakuatsiooni_lopp
+
+- id: P03
+  pealkiri: "Eelhoiatusel puudub kanal"
+  pohimote: "proportsionaalsus"
+  noue: "Hoiatus peab olema efektiivne: kanal, saatja, aeg ja kordus, mitte ainult kavatsus."
+  allikas: "AP I art 57(2)(c)"
+  ihl_id: "IHL-R12"
+  soovitus: "Lisa hoiatuse kanal(id), saatja, aeg ja kordus; kooskõlasta Päästeameti ja CIMIC-iga."
+  kontroll: hoiatuse_kanal
+
+- id: P05
+  pealkiri: "Katkestamise kriteerium puudub"
+  pohimote: "proportsionaalsus"
+  noue: "Käsk peab ütlema, kes ja mille alusel peatab rünnaku, kui objekt ei ole sõjaline või kahju muutub ülemääraseks."
+  allikas: "AP I art 57(2)(b)"
+  ihl_id: "IHL-R11"
+  soovitus: "Lisa punkti 3d või 5 katkestamise kriteerium, otsustaja ja sidekanal."
+  kontroll: katkestamine
+
+- id: V01
+  pealkiri: "Tõkke eesmärk ja alternatiiv on põhjendamata"
+  pohimote: "sõjaline vajadus"
+  noue: "Iga tõkke ja lõhkamise kohta peab olema eesmärk (mis sõjalist eelist see annab) ja miks valitud vahend on vähim kahju tekitav."
+  allikas: "AP I art 57(2)(a)(ii); art 52(2)"
+  ihl_id: "IHL-R09"
+  soovitus: "Kirjuta T1 eesmärk ja oodatav sõjaline eelis; näita, miks just see vahend ja mitte blokeerimine."
+  kontroll: tokke_eesmark
+
+- id: V02
+  pealkiri: "Sihtmärgi side manöövriga on kirjas"
+  pohimote: "sõjaline vajadus"
+  noue: "Sihtmärk peab teenima konkreetset ülesannet, mitte olema nimekirjas ilma eesmärgita."
+  allikas: "AP I art 52(2)"
+  ihl_id: "IHL-R05"
+  soovitus: "Hoia see seos ka pärast aegade või üksuste muutmist."
+  kontroll: sihtmargi_eesmark
+
+- id: V06
+  pealkiri: "Tsiviilide evakuatsioon on korraldatud"
+  pohimote: "sõjaline vajadus"
+  noue: "Kaitseja peab eemaldama tsiviilid sõjaliste objektide lähedusest."
+  allikas: "AP I art 58(a)"
+  ihl_id: "IHL-R40"
+  soovitus: "Kontrolli, et evakuatsioon kataks ka tulelöökide ala ja et seda korratakse enne H+5."
+  kontroll: evakuatsioon_korraldatud
